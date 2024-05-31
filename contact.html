@@ -7,62 +7,175 @@
       content="width=device-width, initial-scale=1.0"
     />
     <title>The Redeemed And Balanced Teenagers | CONTACT</title>
+    <link
+      rel="stylesheet"
+      href="contact.css"
+    />
   </head>
   <body>
-    <form id="myForm">
-      <label for="Name">Name:</label><br />
-      <input
-        type="text"
-        id="name"
-        name="Name"
-        required
-      /><br />
+    <div class="container">
+      <div class="bg">
+        <img
+          width="100vw"
+          height="100vh"
+          src="./Assets/pieces-blue-stationery.jpg"
+          alt="Background"
+        />
+      </div>
+      <div class="contain">
+        <header>
+          <nav>
+            <div class="logo">
+              <img
+                width="29px"
+                height="48px"
+                src="./Assets/fav.png"
+                alt=""
+              />
+              <h1>
+                The Redeemed & <br />Balanced Teenagers <br />
+                <hr />
+              </h1>
+            </div>
+            <div class="link">
+              <div class="links">
+                <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li class="about">
+                    <a href="about.html"
+                      ><span>ABOUT US</span>
+                      <img
+                        src="./Assets/dropdown-svgrepo-com.svg"
+                        alt="Dropdown"
+                      />
+                    </a>
+                    <div class="about-component">
+                      <a href="#vision">OUR VISION</a>
+                      <a href="#history">HOW WE STARTED</a>
+                      <a href="#leaders">MEET OUR LEADERS</a>
+                    </div>
+                  </li>
+                  <li><a href="motivation.html">MOTIVATION</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+              </div>
+              <div class="call">
+                <button>
+                  <a href="tel:08136604534">CALL US</a>
+                </button>
+                <img
+                  src="./Assets/call-receive-svgrepo-com.svg"
+                  alt="Call"
+                />
+              </div>
+            </div>
+            <div
+              class="menu-btn"
+              id="menu-btn"
+            >
+              <img
+                id="good"
+                src="./Assets/hamburger-md-svgrepo-com.svg"
+                alt="Hamburger"
+              />
+              <img
+                id="bad"
+                src="./Assets/cancel-svgrepo-com.svg"
+                alt="Cancel"
+              />
+            </div>
+            <div
+              class="links_mobile"
+              id="links_mobile"
+            >
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT US </a></li>
+                <li><a href="motivation.html">MOTIVATION</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="tel:08136604534">CALL US</a></li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <form id="myForm">
+          <label for="Name">Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="Name"
+            required
+          /><br />
 
-      <label for="Email">Email:</label><br />
-      <input
-        type="email"
-        id="email"
-        name="Email"
-        required
-      /><br />
-      <input
-        type="submit"
-        value="Submit"
-      />
-    </form>
+          <label for="Email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            required
+          /><br />
+          <input
+            type="submit"
+            value="Submit"
+          />
+        </form>
 
-    <script>
-      document
-        .getElementById('myForm')
-        .addEventListener('submit', function (event) {
-          event.preventDefault(); // Prevent default form submission
+        <script>
+          document
+            .getElementById('myForm')
+            .addEventListener('submit', function (event) {
+              event.preventDefault(); // Prevent default form submission
 
-          // Get form data
-          var formData = new FormData(this);
+              // Get form data
+              var formData = new FormData(this);
 
-          // Send form data to Formspree
-          fetch('https://formspree.io/f/xnqeyelj', {
-            method: 'POST',
-            body: formData,
-            headers: {
-              Accept: 'application/json',
-            },
-          })
-            .then(function (response) {
-              if (response.ok) {
-                alert('Form submitted successfully!');
-                document.getElementById('myForm').reset(); // Reset form after submission
-              } else {
-                throw new Error('Form submission failed!');
-              }
-            })
-            .catch(function (error) {
-              console.error(error);
-              alert(
-                'An error occurred while submitting the form. Please try again later.'
-              );
+              // Send form data to Formspree
+              fetch('https://formspree.io/f/xnqeyelj', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                  Accept: 'application/json',
+                },
+              })
+                .then(function (response) {
+                  if (response.ok) {
+                    alert('Form submitted successfully!');
+                    document.getElementById('myForm').reset(); // Reset form after submission
+                  } else {
+                    throw new Error('Form submission failed!');
+                  }
+                })
+                .catch(function (error) {
+                  console.error(error);
+                  alert(
+                    'An error occurred while submitting the form. Please try again later.'
+                  );
+                });
             });
-        });
-    </script>
+        </script>
+        <footer>
+          <nav>
+            <a href="https://facebook.com/groups/780888936278581"
+              ><img
+                src="Assets/facebook.png"
+                alt="facebook" /></a
+            ><a href=""
+              ><img
+                src="Assets/instagram.png"
+                alt="instagram" /></a
+            ><a href=""
+              ><img
+                src="Assets/tiktok.png"
+                alt="tiktok" /></a
+            ><a href=""
+              ><img
+                src="Assets/youtube.png"
+                alt="youtube"
+            /></a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>

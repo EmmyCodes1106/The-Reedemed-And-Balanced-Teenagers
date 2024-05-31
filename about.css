@@ -358,6 +358,9 @@ footer nav a img {
   }
   #bad {
     display: none;
+    position: fixed;
+    top: 10px;
+    right: 20px;
   }
   .links_mobile {
     display: none;

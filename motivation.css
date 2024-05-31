@@ -22,7 +22,7 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .container {
   position: relative;
@@ -117,35 +117,55 @@ nav .links a span {
 .menu-btn {
   display: none;
 }
-.call button {
-  width: 87px;
+.menu-btn img {
+  width: 30px;
+}
+.call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.call {
+  width: 97px;
   height: 32px;
   background-color: #868484;
   font-family: 'Graduate', sans-serif;
   border: none;
   border-radius: 6px;
 }
+.call button {
+  background: transparent;
+  border: none;
+}
 .call button a {
   text-decoration: none;
   color: #000000;
   font-family: 'Graduate', sans-serif;
+  font-weight: bold;
+}
+.links img {
+  width: 20px;
+  height: 20px;
+}
+.call img {
+  width: 20px;
+  height: 18px;
+  margin-bottom: 3px;
+  margin-left: 8px;
+}
+.content {
+  position: relative;
 }
 .motivate {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   gap: 30px;
 }
-.motivate .quote {
+.quote {
   background-color: red;
 }
 
-.motivate:nth-child(1) .quote {
-  background-color: #ffffae;
-  width: 40vw;
-  height: 70vh;
-}
 .footer {
   justify-content: flex-end;
   flex: 1;
@@ -157,6 +177,7 @@ footer nav {
   position: fixed;
   float: right;
   bottom: 20px;
+  right: 0;
 }
 footer nav a img {
   width: 23px;
@@ -249,6 +270,14 @@ footer nav a img {
   }
   .bg img {
     min-height: 100vh !important;
+  }
+  footer nav {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    width: 90vw;
   }
 }
 
