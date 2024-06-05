@@ -204,9 +204,10 @@ nav .links a span {
 }
 .hero .content button a {
   text-decoration: none;
-  font-family: 'Rampart One', sans-serif;
+  font-family: sans-serif;
   color: #17234f;
   font-size: 16px;
+  font-weight: 700;
 }
 .hero .content img.line {
   position: absolute;
