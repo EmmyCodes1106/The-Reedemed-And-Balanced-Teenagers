@@ -183,7 +183,7 @@ nav .links a span {
   font-family: 'Gowun Batang', sans-serif;
   text-align: center;
   font-size: 30px;
-  margin-top: 40px;
+  margin-top: 20px;
   font-weight: 100;
   margin-left: 20px;
   margin-right: 20px;
@@ -201,6 +201,15 @@ nav .links a span {
   text-align: center;
   margin: 20px;
   font-weight: 600;
+}
+.history p {
+  font-family: 'Gowun Batang', sans-serif;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 100;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 20px;
 }
 .vision p {
   font-family: 'Gowun Batang', sans-serif;
