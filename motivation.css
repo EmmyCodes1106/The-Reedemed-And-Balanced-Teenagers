@@ -126,7 +126,7 @@ nav .links a span {
   align-items: center;
 }
 .call {
-  width: 97px;
+  width: 100px;
   height: 32px;
   background-color: #868484;
   font-family: 'Graduate', sans-serif;
@@ -323,6 +323,32 @@ footer nav a img {
     bottom: 20px;
     width: 90vw;
   }
+  .quote h4 {
+    max-width: 90vw;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .quote h4 {
+    min-width: 90vw;
+    font-size: 16px;
+  }
+  .quote img {
+    min-width: 90vw;
+  }
+  .motivate {
+    flex-direction: column;
+  }
+  body {
+    overflow: unset;
+  }
+  .quote {
+    min-width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -339,5 +365,12 @@ footer nav a img {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .quote h4 {
+    min-width: 90vw;
+    font-size: 16px;
+  }
+  .quote img {
+    min-width: 90vw;
   }
 }
