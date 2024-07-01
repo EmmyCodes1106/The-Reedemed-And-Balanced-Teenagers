@@ -12,6 +12,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Gowun+Batang&family=Handjet:wght@100..900&family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=GFS+Didot&family=Gowun+Batang&family=Handjet:wght@100..900&family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=GFS+Didot&family=Gowun+Batang&family=Handjet:wght@100..900&family=Inter:wght@100..900&family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 * {
   padding: 0;
@@ -43,6 +44,7 @@ body {
   margin: 0;
   opacity: 90%;
   object-fit: cover;
+  mask-image: ;
 }
 header {
   flex: 1;
@@ -112,7 +114,7 @@ nav .links a span {
   width: max-content;
 }
 .links ul li:nth-child(4) a {
-  color: #fdf1d0;
+  color: #ffffff;
 }
 .menu-btn {
   display: none;
@@ -219,8 +221,99 @@ footer nav a img {
 .links_mobile {
   display: none;
 }
-form {
+.connection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.connect {
   position: relative;
+  width: 60vw;
+  height: 40vh;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 30px;
+  padding: 32px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.connect_text {
+  max-width: max-content;
+  margin: auto;
+}
+.connect_text h1 {
+  text-align: center;
+  font-family: 'Graduate', sans-serif;
+}
+.connect_icon {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.connector img {
+  padding: 16px;
+}
+.connector h2,
+a {
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Handjet', sans-serif;
+}
+.form {
+  background-color: #ffffff;
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+.form h1 {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+#myForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#myForm input#name {
+  width: 30vw;
+  border-radius: 5px;
+  height: 5vh;
+  border: 1.5px solid black;
+  padding: 15px;
+  font-weight: 400;
+}
+#myForm input#email {
+  width: 30vw;
+  border-radius: 5px;
+  height: 5vh;
+  border: 1.5px solid black;
+  padding: 15px;
+  font-weight: 400;
+}
+#myForm input#submit {
+  width: 15vw;
+  border-radius: 5px;
+  height: 5vh;
+  border: none;
+  background-color: #007fc6;
+  text-transform: uppercase;
+  color: white;
+  margin: 16px;
 }
 
 @media screen and (max-width: 768px) {
@@ -269,6 +362,25 @@ form {
     bottom: 20px;
     width: 90vw;
   }
+  .connect {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    height: max-content;
+  }
+  .connect_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  body {
+    overflow: visible;
+  }
+
+  .form {
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -285,5 +397,12 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (max-width: 620px) {
+  #myForm input#submit,
+  #myForm input#name,
+  #myForm input#email {
+    width: 60vw;
   }
 }

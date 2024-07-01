@@ -13,6 +13,7 @@
     />
   </head>
   <body>
+    <div class="mask"></div>
     <div class="container">
       <div class="bg">
         <img
@@ -98,27 +99,69 @@
             </div>
           </nav>
         </header>
-        <form id="myForm">
-          <label for="Name">Name:</label><br />
-          <input
-            type="text"
-            id="name"
-            name="Name"
-            required
-          /><br />
+        <div class="connection">
+          <div class="connect">
+            <div class="connect_text">
+              <h1>CONTACT US VIA</h1>
+            </div>
+            <div class="connect_icon">
+              <div class="connector">
+                <a href=""
+                  ><img
+                    src="./Assets/WhatsApp.png"
+                    alt="WhatsApp"
+                /></a>
+                <br />
+                <a href=""><h2>WhatsApp</h2></a>
+              </div>
+              <div class="connector">
+                <a href=""
+                  ><img
+                    src="./Assets/Composing Mail.png"
+                    alt="Mail"
+                /></a>
+                <br />
+                <a href=""> <h2>Mail</h2></a>
+              </div>
+              <!-- <div class="connector">
+                <a href=""
+                  ><img
+                    src="./Assets/Phone.png"
+                    alt="Phone"
+                /></a>
+                <br />
+                <a href=""><h2>Phone</h2></a>
+              </div> -->
+            </div>
+          </div>
+          <div class="form">
+            <h1>Subscribe To Our Newsletter For Updates</h1>
+            <form id="myForm">
+              <label for="Name"></label><br />
+              <input
+                placeholder="Name"
+                type="text"
+                id="name"
+                name="Name"
+                required
+              />
 
-          <label for="Email">Email:</label><br />
-          <input
-            type="email"
-            id="email"
-            name="Email"
-            required
-          /><br />
-          <input
-            type="submit"
-            value="Submit"
-          />
-        </form>
+              <label for="Email"></label><br />
+              <input
+                placeholder="Email"
+                type="email"
+                id="email"
+                name="Email"
+                required
+              /><br />
+              <input
+                id="submit"
+                type="submit"
+                value="Submit"
+              />
+            </form>
+          </div>
+        </div>
 
         <script>
           document
