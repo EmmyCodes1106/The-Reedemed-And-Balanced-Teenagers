@@ -44,6 +44,14 @@ body {
   opacity: 90%;
   object-fit: cover;
 }
+.blur {
+  filter: blur(10px);
+  transition: all 2s;
+}
+img {
+  filter: blur(0px);
+  transition: all 2s;
+}
 header {
   flex: 1;
 }
