@@ -45,6 +45,14 @@ body {
   opacity: 70%;
   object-fit: cover;
 }
+.blur {
+  filter: blur(10px);
+  transition: all 2s;
+}
+img {
+  filter: blur(0px);
+  transition: all 2s;
+}
 .container {
   position: relative;
   height: 100vh;

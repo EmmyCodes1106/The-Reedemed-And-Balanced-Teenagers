@@ -3,6 +3,7 @@ const hamContainer = document.querySelector("#menu-btn");
 const hamGood = document.querySelector("#good");
 const hamBad = document.querySelector("#bad");
 const navMobile = document.querySelector("#links_mobile");
+const targetImg = document.getElementById("target");
 let checker = false;
 
 hamContainer.addEventListener("click", function () {
@@ -20,3 +21,11 @@ hamContainer.addEventListener("click", function () {
         checker = false;
     }
 })
+const img = new Image();
+img.onload = () => {
+    targetImg.classList.remove("blur");
+    targetImg.classList.add("img");
+    targetImg.src = "./Assets/pieces-blue-stationery.jpg";
+};
+
+img.src = "./Assets/pieces-blue-stationery.jpg";
