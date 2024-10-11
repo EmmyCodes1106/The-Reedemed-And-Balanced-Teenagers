@@ -160,78 +160,6 @@ nav .links a span {
   font-family: 'Graduate', sans-serif;
   font-weight: bold;
 }
-.hero {
-  display: flex;
-  margin-top: 50px;
-  position: relative;
-  width: 100%;
-  justify-content: flex-end;
-  height: 70%;
-  flex: 2;
-}
-.hero .img img {
-  width: 60vw;
-  height: 90vh;
-  border-radius: 20px;
-  opacity: 95%;
-  max-width: max-content;
-  bottom: -200px;
-  left: 0;
-  position: absolute;
-}
-.hero .content {
-  width: 40vw;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.hero .content h1 {
-  font-family: 'Strait', sans-serif;
-  color: #3f238d;
-  margin-top: -30px;
-  font-size: 28px;
-  padding-block: 16px;
-}
-.hero .content h2 {
-  font-family: 'Ravi Prakash', sans-serif;
-  color: #092429;
-  font-size: 24px;
-}
-.hero .content p {
-  font-family: 'Urbanist', sans-serif;
-  color: #370a33;
-  font-size: 21px;
-}
-.hero .content button {
-  background-color: #fdf1d0;
-  width: 140px;
-  height: 48px;
-  border-radius: 16px;
-  border: none;
-  left: 100px;
-}
-.hero .content button a {
-  text-decoration: none;
-  font-family: sans-serif;
-  color: #17234f;
-  font-size: 16px;
-  font-weight: 700;
-}
-.hero .content img.line {
-  position: absolute;
-  width: 150px;
-  top: -230px;
-  rotate: 37deg;
-  left: -140px;
-}
-.hero .content img.aeroplane {
-  width: 90px;
-  height: 90px;
-  position: absolute;
-  top: -100px;
-  left: -70px;
-  rotate: 4deg;
-}
 footer {
   justify-content: flex-end;
   flex: 1;
@@ -288,11 +216,6 @@ footer nav a img {
   width: 100%;
   text-align: start;
 }
-.call-to-action {
-  position: relative;
-  width: max-content;
-}
-
 .links_mobile {
   display: none;
 }
@@ -306,13 +229,83 @@ footer nav a img {
   margin-bottom: 3px;
   margin-left: 8px;
 }
+
+.carousel {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100%;
+  max-width: 800px;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(1.4);
+}
+
+/* Arrows styling */
+.prev-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  left: 10px;
+}
+
+.prev-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  right: 10px;
+}
+
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 @media screen and (max-width: 768px) {
   .link {
     display: none !important;
   }
   .menu-btn {
     display: block;
-    z-index: 2;
+    z-index: 1000;
   }
   #bad {
     display: none;
@@ -324,7 +317,7 @@ footer nav a img {
     right: 0;
     top: 0;
     background-color: #070934;
-    z-index: 1;
+    z-index: 100;
     justify-content: center;
     align-items: center !important;
     height: 65vh;
@@ -341,7 +334,19 @@ footer nav a img {
     padding: 20px;
     text-align: center;
   }
+  footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel {
+    max-width: 900px;
+    min-width: 300px;
+    min-height: 90px;
+  }
 }
+
 @media screen and (max-width: 425px) {
   .hero .img img {
     display: none;
